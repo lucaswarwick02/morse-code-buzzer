@@ -18,10 +18,13 @@ pico_sdk_init()
 
 include(example_auto_set_url.cmake)
 # Add blink example
-add_subdirectory(maker-blink)
+add_subdirectory(morse-code-translator)
 
 add_compile_options(-Wall
         -Wno-format          # int != int32_t as far as the compiler is concerned because gcc has int32_t as long int
         -Wno-unused-function # we have some for the docs that aren't called
         -Wno-maybe-uninitialized
         )
+
+pico_enable_stdio_usb(morse-code-translator 1)
+pico_enable_stdio_uart(morse-code-translator 0)
