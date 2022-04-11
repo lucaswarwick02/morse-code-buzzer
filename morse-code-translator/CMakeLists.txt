@@ -1,5 +1,6 @@
 add_executable(morse-code-translator
         morse-code-translator.c
+        decoder.c
         )
 
 # pull in common dependencies

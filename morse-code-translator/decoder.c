@@ -1,114 +1,115 @@
 #include "decoder.h"
 
 char DecodeString (char key[]) {
+    printf("Decoding: %s\n", key);
     // Letters
-    if (key == ".-") {
+    if (strcmp(key, ".-") == 0) {
         return 'A';
     }
-    else if (key == "-...") {
+    else if (strcmp(key, "-...") == 0) {
         return 'B';
     }
-    else if (key == "-.-.") {
+    else if (strcmp(key, "-.-.") == 0) {
         return 'C';
     }
-    else if (key == "-..") {
+    else if (strcmp(key, "-..") == 0) {
         return 'D';
     }
-    else if (key == ".") {
+    else if (strcmp(key, ".") == 0) {
         return 'E';
     }
-    else if (key == "..-.") {
+    else if (strcmp(key, "..-.") == 0) {
         return 'F';
     }
-    else if (key == "--.") {
+    else if (strcmp(key, "--.") == 0) {
         return 'G';
     }
-    else if (key == "...") {
+    else if (strcmp(key, "...") == 0) {
         return 'H';
     }
-    else if (key == "..") {
+    else if (strcmp(key, "..") == 0) {
         return 'I';
     }
-    else if (key == ".---") {
+    else if (strcmp(key, ".---") == 0) {
         return 'J';
     }
-    else if (key == "-.-") {
+    else if (strcmp(key, "-.-") == 0) {
         return 'K';
     }
-    else if (key == ".-..") {
+    else if (strcmp(key, ".-..") == 0) {
         return 'L';
     }
-    else if (key == "--") {
+    else if (strcmp(key, "--") == 0) {
         return 'M';
     }
-    else if (key == "-.") {
+    else if (strcmp(key, "-.") == 0) {
         return 'N';
     }
-    else if (key == "---") {
+    else if (strcmp(key, "---") == 0) {
         return 'O';
     }
-    else if (key == ".--.") {
+    else if (strcmp(key, ".--.") == 0) {
         return 'P';
     }
-    else if (key == "--.-") {
+    else if (strcmp(key, "--.-") == 0) {
         return 'Q';
     }
-    else if (key == "-.-") {
+    else if (strcmp(key, "-.-") == 0) {
         return 'R';
     }
-    else if (key == "...") {
+    else if (strcmp(key, "...") == 0) {
         return 'S';
     }
-    else if (key == "-") {
+    else if (strcmp(key, "-") == 0) {
         return 'T';
     }
-    else if (key == "..-") {
+    else if (strcmp(key, "..-") == 0) {
         return 'U';
     }
-    else if (key == "...-") {
+    else if (strcmp(key, "...-") == 0) {
         return 'V';
     }
-    else if (key == ".--") {
+    else if (strcmp(key, ".--") == 0) {
         return 'W';
     }
-    else if (key == "-..-") {
+    else if (strcmp(key, "-..-") == 0) {
         return 'X';
     }
-    else if (key == "-.--") {
+    else if (strcmp(key, "-.--") == 0) {
         return 'Y';
     }
-    else if (key == "--..") {
+    else if (strcmp(key, "--..") == 0) {
         return 'Z';
     }
     // Numbers
-    else if (key == ".----") {
+    else if (strcmp(key, ".----") == 0) {
         return '1';
     }
-    else if (key == "..---") {
+    else if (strcmp(key, "..---") == 0) {
         return '2';
     }
-    else if (key == "...--") {
+    else if (strcmp(key, "...--") == 0) {
         return '3';
     }
-    else if (key == "....-") {
+    else if (strcmp(key, "....-") == 0) {
         return '4';
     }
-    else if (key == ".....") {
+    else if (strcmp(key, ".....") == 0) {
         return '5';
     }
-    else if (key == "-....") {
+    else if (strcmp(key, "-....") == 0) {
         return '6';
     }
-    else if (key == "--...") {
+    else if (strcmp(key, "--...") == 0) {
         return '7';
     }
-    else if (key == "---..") {
+    else if (strcmp(key, "---..") == 0) {
         return '8';
     }
-    else if (key == "----.") {
+    else if (strcmp(key, "----.") == 0) {
         return '9';
     }
-    else if (key == "-----") {
+    else if (strcmp(key, "-----") == 0) {
         return '0';
     }
     else {
