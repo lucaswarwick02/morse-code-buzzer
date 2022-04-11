@@ -6,6 +6,10 @@
 
 #include "pico/stdlib.h"
 #include <stdio.h>
+#include <string.h>
+#include "decoder.h"
+
+char DecodeString (char key[]);
 
 struct Duration {
     // All 3 members are measured in microseconds
@@ -28,6 +32,8 @@ int main() {
     int isDown = 0; // 0 = up, 1 = down
     
     struct Duration signal;
+
+    char str[5] = "";
     
     while (true) {
         if (gpio_get(INPUT_BUTTON)) {
@@ -40,12 +46,17 @@ int main() {
                 // 1000000 microseconds = 1 second
                 if (signal.difference < 330000) {
                     // Short Signal
-                    printf(".");
+                    //printf("%c%c%c", DecodeString(".-"), DecodeString("-..."), DecodeString("-.-."));
+                    char ch = '.';
+                    strncat(str, &ch, 1);
                 }
                 else {
                     // Long Signal
-                    printf("_");
+                    //printf("%c%c%c", DecodeString("-..."), DecodeString(".--"), DecodeString(".-"));
+                    char ch = '-';
+                    strncat(str, &ch, 1);
                 }
+                printf("%s", str);
                 // Reset the timers
                 signal.start = 0;
                 signal.end = 0;
