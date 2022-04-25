@@ -18,7 +18,7 @@ pico_sdk_init()
 
 include(example_auto_set_url.cmake)
 # Add blink example
-add_subdirectory(morse-code-translator)
+add_subdirectory(morse-code-buzzer)
 
 add_compile_options(-Wall
         -Wno-format          # int != int32_t as far as the compiler is concerned because gcc has int32_t as long int
@@ -26,5 +26,5 @@ add_compile_options(-Wall
         -Wno-maybe-uninitialized
         )
 
-pico_enable_stdio_usb(morse-code-translator 1)
-pico_enable_stdio_uart(morse-code-translator 0)
+pico_enable_stdio_usb(morse-code-buzzer 1)
+pico_enable_stdio_uart(morse-code-buzzer 0)

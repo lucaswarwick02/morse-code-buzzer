@@ -1,1 +1,0 @@
-char DecodeString (char key[]);
